@@ -11,20 +11,20 @@ Features include:
 
 ## Instructions
 
-App Build:
+App Build:  
 Runs on iPhone (14 Pro), deployment target is iOS 16.2, device orientation is static portrait.
 
-Search:
+Search:  
 Search bar can be cleared by tapping the 'x-mark' symbol at the trailing edge.
 Results appear in a scrollable grid of 2x10. 
 Can immediately scroll back to top by tapping on the 'upwards-arrow-head' symbol at the bottom-right corner. 
 
-Detail screen:
+Detail screen:  
 Details of each movie can be viewed by tapping on the card-shaped icons.
 
-Pagination:
+Pagination:  
 Pagination is triggered by scrolling up.
 
-Favorites:
+Favorites:  
 Add and remove favorites by tapping on the heart icon at the top-right corner of the detail screen.
 
