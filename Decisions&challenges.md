@@ -5,7 +5,7 @@ Type ambiguity:
 - Along with search results, I also wanted to persist favorites via Core Data. This lead to declaring a common protocol to handle both search results and favorites. However, this in turn caused the addition/removal of favorites to affect the search results entities as well. Fixed by making copies of type 'any MovieProtocol'.  
 
 Short-term persistence for favorites:
-- Removing favorites via the detail screen would logically remove the movie data immediately, and consequently clear the detail screen. But it would be more user-friendly to allow the detail screen to persist, for instance if the user changes their mind and re-favorites. Fixed by making copies of type 'any MovieProtocol'.     
+- Removing favorites via the detail screen would logically remove the movie data immediately, and consequently clear the detail screen. But it would be more user-friendly to allow the detail screen to persist (whether accessed via the 'search' tab or 'favorites' tab), for instance if the user changes their mind and re-favorites. Fixed by making copies of type 'any MovieProtocol'.     
 
 Updating CoreData entities in memory:
 - Core Data entities persist in memory despite 'execute(deleteRequest)'. Fixed by manually updating in-memory object following 'execute(deleteRequest)' as well as 'moc.automaticallyMergesChangesFromParent = true'.  
