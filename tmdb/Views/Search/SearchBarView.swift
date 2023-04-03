@@ -23,6 +23,7 @@ struct SearchBarView: View {
                         Task {
                             await moviesModel.searchMovies(query: moviesModel.searchText, page: 1)
                         }
+                        endTextEditing()
                     }
                     
                 Image(systemName: "xmark.circle.fill")
@@ -31,10 +32,9 @@ struct SearchBarView: View {
                     .padding(.trailing, 8)
                     .opacity(!moviesModel.searchText.isEmpty ? 1.0 : 0.0)
                     .onTapGesture {
+                        endTextEditing()
                         moviesModel.searchText = ""
                     }
-                    .accessibility(identifier: "clearButton")
-                    .accessibilityLabel("Clear search text")
                     
             }
             .frame(height: 36.0)
@@ -52,5 +52,11 @@ struct SearchBarView: View {
             )
         }
     }
+}
+
+extension SearchBarView {
+  func endTextEditing() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),to: nil, from: nil, for: nil)
+  }
 }
 

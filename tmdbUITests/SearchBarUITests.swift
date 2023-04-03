@@ -29,6 +29,7 @@ class SearchBarViewUITests: XCTestCase {
         let clearButton = app.images.allElementsBoundByIndex.first(where: { clearButtonFrame.contains($0.frame) })
         XCTAssertNotNil(clearButton, "Clear button does not exist")
         
-        XCTAssertEqual(searchBar.value as! String, "Test Movie", "Search bar should be empty after tapping clear button")
+        // Note: `.typeText()` can be inconsistent if hardware is enabled in Scheme
+        XCTAssertEqual(searchBar.value as! String, "Test Movie", "Search bar text should be Test Movie")
     }
 }
