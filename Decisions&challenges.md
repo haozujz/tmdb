@@ -11,7 +11,10 @@ Updating CoreData entities in memory:
 - Core Data entities persist in memory despite 'execute(deleteRequest)'. Fixed by manually updating in-memory object following 'execute(deleteRequest)' as well as 'moc.automaticallyMergesChangesFromParent = true'.  
 
 View reactivity in NavigationStack:
-- The favorites heart icon appearance did not automatically update with changes to favorites. Fixed by manually reloading via '.id()'.   
+- The favorites heart icon appearance did not automatically update with changes to favorites. Fixed by manually reloading via '.id()'.  
+
+Downloading image data:
+- Downloading image data to display offline may fail. Although whilst online, we can fallback to calling the image Url in a AsyncImage(). Can fix by storing image data upon AsyncImage()'s success phase.  
 
 URL encoding:
 - Including spaces in the middle of query strings leads to zero api reponse results with no erros. This is due to how the api encodes spaces as '+' rather than '%20'. Fixed by replacing mid-query spaces with '+'.   
