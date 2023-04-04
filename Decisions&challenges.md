@@ -8,7 +8,7 @@ Short-term persistence for favorites:
 - Removing favorites via the detail screen would logically remove the movie data immediately, and consequently clear the detail screen. But it would be more user-friendly to allow the detail screen to persist (whether accessed via the 'search' tab or 'favorites' tab), for instance if the user changes their mind and re-favorites. Fixed by making copies of type 'any MovieProtocol'.     
 
 Updating CoreData entities in memory:
-- Core Data entities persist in memory despite 'execute(deleteRequest)'. Fixed by manually updating in-memory object following 'execute(deleteRequest)' as well as 'moc.automaticallyMergesChangesFromParent = true'.  
+- Core Data entities persist in memory despite '.execute(deleteRequest)'. Fixed by manually updating in-memory object following '.execute(deleteRequest)' as well as '.automaticallyMergesChangesFromParent = true'.  
 
 View reactivity in NavigationStack:
 - The favorites heart icon appearance did not automatically update with changes to favorites. Fixed by manually reloading via '.id()'.  
