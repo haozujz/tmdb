@@ -26,8 +26,7 @@ Pagination:
 Pagination is triggered by scrolling up.
 
 Favorites:  
-Add and remove favorites by tapping on the heart icon at the top-right corner of the detail screen.
-
-
+Add and remove favorites by tapping on the heart icon at the top-right corner of the detail screen.  
+   
 <img width="253" alt="s1" src="https://user-images.githubusercontent.com/79493809/230723283-54b77222-8d37-4d13-9ad2-e4c6271a3847.png"><img width="253" alt="s2" src="https://user-images.githubusercontent.com/79493809/230723296-72a2d0f1-189a-46cd-9c1f-15d567c3578d.png"><img width="253" alt="s3" src="https://user-images.githubusercontent.com/79493809/230723303-09ed49de-3a2e-4378-a5b6-39802628ae04.png">
 
