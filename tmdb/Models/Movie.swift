@@ -31,7 +31,7 @@ extension Movie {
     }
 }
 
-// Access a mock object conforming MovieProtocol for testing
+// Access a mock object conforming to MovieProtocol for testing
 extension Movie {
     static func mockWithMovieProtocol() -> any MovieProtocol {
         let mock = Movie.mock()
@@ -88,7 +88,7 @@ struct MovieCopy: MovieProtocol {
     }
 */
 
-//Example api call: "https://api.themoviedb.org/3/search/movie?api_key=8bb4929a43eddbd339300eb39b330d4b&language=en-US&include_adult=false&query=a+frozen+rooster&page=1"
+//Example api call url: "https://api.themoviedb.org/3/search/movie?api_key=8bb4929a43eddbd339300eb39b330d4b&language=en-US&include_adult=false&query=a+frozen+rooster&page=1"
 // Complete poster path for a sample movie: https://image.tmdb.org/t/p/w500/xsW7M4b4gawgFKCzcXHL2MSeswj.jpg
 // Complete backdrop path for a sample movie: https://image.tmdb.org/t/p/w500/eN6R6mb3ntHwA3y3MhSwpP78ljN.jpg
 

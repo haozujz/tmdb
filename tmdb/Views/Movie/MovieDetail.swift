@@ -22,9 +22,9 @@ struct MovieDetail: View {
                 .ignoresSafeArea()
             
             ScrollView(.vertical, showsIndicators: false) {
-                Spacer(minLength: backdropHeight + 70)
-                
                 VStack {
+                    Spacer(minLength: backdropHeight + 70)
+                    
                     Text(movie.title ?? "Missing title")
                         .font(.title3)
                         .fontWeight(.semibold)
@@ -83,6 +83,8 @@ struct MovieDetail: View {
                     .frame(width: UIScreen.main.bounds.width)
                     .background(Color.gray.opacity(0.2))
                     .padding(.top, 8)
+                    
+                    Spacer(minLength: 80)
                 }
             }
             

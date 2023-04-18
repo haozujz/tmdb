@@ -70,7 +70,7 @@ final class MoviesModel: ObservableObject {
                                     
                                     if let backdropPath = movie.backdrop_path {
                                         self.service.downloadImageData(url: self.service.imageUrlString(for: backdropPath)) { imageData in
-                                            let _: Data = imageData
+                                            //let _: Data = imageData
                                             entity.backdrop = imageData
                                         }
                                     }
@@ -95,7 +95,7 @@ final class MoviesModel: ObservableObject {
                             try await self.moc.perform {
                                 let fetchRequest: NSFetchRequest<NSFetchRequestResult> = MovieSearchResult.fetchRequest()
                                 let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-                                //  Note: `try? self.moc.execute(batchDeleteRequest)` will not automtically update in-memory objects following a deletion
+                                //  Note: `.execute(batchDeleteRequest)` will not automtically update in-memory objects following a deletion
                                 try self.moc.executeAndMergeChanges(using: batchDeleteRequest)
                                 
                                 for movie in newMovies {
@@ -112,14 +112,14 @@ final class MoviesModel: ObservableObject {
                                     
                                     if let posterPath = movie.poster_path {
                                         self.service.downloadImageData(url: self.service.imageUrlString(for: posterPath)) { imageData in
-                                            let _: Data = imageData
+                                            //let _: Data = imageData
                                             entity.image = imageData
                                         }
                                     }
                                     
                                     if let backdropPath = movie.backdrop_path {
                                         self.service.downloadImageData(url: self.service.imageUrlString(for: backdropPath)) { imageData in
-                                            let _: Data = imageData
+                                            //let _: Data = imageData
                                             entity.backdrop = imageData
                                         }
                                     }
@@ -162,14 +162,14 @@ final class MoviesModel: ObservableObject {
         
         if let posterPath = movie.poster_path {
             self.service.downloadImageData(url: self.service.imageUrlString(for: posterPath)) { imageData in
-                let _: Data = imageData
+                //let _: Data = imageData
                 favorite.image = imageData
             }
         }
         
         if let backdropPath = movie.backdrop_path {
             self.service.downloadImageData(url: self.service.imageUrlString(for: backdropPath)) { imageData in
-                let _: Data = imageData
+                //let _: Data = imageData
                 favorite.backdrop = imageData
             }
         }

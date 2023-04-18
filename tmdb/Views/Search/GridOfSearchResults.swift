@@ -22,7 +22,7 @@ struct GridOfSearchResults: View {
                 movieSearchResults
             ) { movie in
                 VStack {
-                    NavigationLink(destination: MovieDetail(movie: movie), label: {MovieCard(movie: movie, scale: 0.6)})
+                    NavigationLink(destination: MovieDetail(movie: movie), label: { MovieCard(movie: movie, scale: 0.6) })
                         .buttonStyle(FlatButtonStyle())
                     
                     VStack(spacing: 0) {

@@ -35,7 +35,7 @@ struct GridOfFavorites: View {
                     backdrop: movie.backdrop)
                 
                 VStack {
-                    NavigationLink(destination: MovieDetail(movie: copy), label: {MovieCard(movie: movie, scale: 0.6)})
+                    NavigationLink(destination: MovieDetail(movie: copy), label: { MovieCard(movie: movie, scale: 0.6) })
                         .buttonStyle(FlatButtonStyle())
                     
                     VStack(spacing: 0) {
