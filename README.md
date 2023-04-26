@@ -17,7 +17,7 @@ Runs on iPhone (14 Pro), deployment target is iOS 16.2, device orientation is st
 Search:  
 Search bar can be cleared by tapping the 'x-mark' symbol at the trailing edge.
 Results appear in a scrollable grid of 2x10. 
-Can immediately scroll back to top by tapping on the 'upwards-arrow-head' symbol at the bottom-right corner. 
+Can immediately scroll back to top by tapping on the 'upwards-chevron' symbol at the bottom-right corner. 
 
 Detail screen:  
 Details of each movie can be viewed by tapping on the card-shaped icons.
